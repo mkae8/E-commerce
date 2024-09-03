@@ -1,3 +1,5 @@
+import { BestSelling } from "@/components/BestSelling";
+import { Catogeries } from "@/components/Catogeries";
 import { FlashSale } from "@/components/FlashSale";
 import { Hero } from "@/components/Hero";
 import { SellingProducts } from "@/components/SellingProducts";
@@ -7,7 +9,6 @@ import Image from "next/image";
 export default async function Home() {
   const result = await fetch("https://fakestoreapi.com/products");
   const objResult = await result.json();
-  console.log(objResult);
 
   return (
     <>
@@ -17,6 +18,8 @@ export default async function Home() {
       </div>
       <FlashSale />
       <SellingProducts posts={objResult} />
+      <Catogeries />
+      <BestSelling posts={objResult} />
     </>
   );
 }

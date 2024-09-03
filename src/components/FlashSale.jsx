@@ -2,15 +2,15 @@
 
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
-
 import { Timer } from "./Timer";
+import { Chip } from "./Chip";
 
 export const FlashSale = () => {
   return (
     <div className="flex flex-col h-[130px] ">
       <div className="h-[103px] w-[1170px] flex flex-col gap-5 ">
         <div className="flex items-center gap-4">
-          <p className="w-5 h-10 bg-[#DB4444] rounded-[4px]"></p>
+          <Chip />
           <p className="text-[#DB4444] font-semibold">Today’s</p>
         </div>
         <div className="flex w-[1170px] justify-between">
