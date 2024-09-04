@@ -15,7 +15,7 @@ const routers = [
 export const Header = () => {
   return (
     <>
-      <div className="w-[1440px] h-12 bg-[#000000] flex justify-center items-center">
+      <div className="w-full h-12 bg-[#000000] flex justify-center items-center">
         <div className=" ">
           <div className="flex gap-2 items-center  w-[859px] justify-between ">
             <p className="text-white text-[14px] w-[550px] flex gap-[8px] ">

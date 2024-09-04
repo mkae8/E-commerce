@@ -13,7 +13,13 @@ export const SellingProducts = ({ posts }) => {
             href={`/list/${id}`}
             className="flex flex-col w-[270px] h-[350px] justify-around shrink-0 "
           >
-            <img src={image} className=" w-[270px] h-[250px] object-contain" />
+            <div className="flex items-center justify-center w-[270px] h-[250px] ">
+              <img
+                src={image}
+                className=" w-[186px] h-[164px] object-contain"
+              />
+            </div>
+
             <p>{title}</p>
             <p className="text-red-400">{price}$</p>
             <p className="opacity-50">{rating.rate}</p>
