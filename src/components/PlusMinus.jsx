@@ -9,9 +9,10 @@ export const PlusMinus = () => {
   };
 
   const decrement = () => {
-    setCount(count - 1);
+    if (count > 0) {
+      setCount(count - 1);
+    }
   };
-
   return (
     <div className="flex items-center">
       <button

@@ -32,7 +32,7 @@ export const FlashSale = ({ posts }) => {
             <p className="text-[#DB4444] font-semibold">Today’s</p>
           </div>
           <div className="flex w-[1170px] justify-between">
-            <div className="flex w-[600px] justify-between  ">
+            <div className="flex w-[700px] justify-between  ">
               <h1 className="text-[36px] font-semibold">Flash Sales</h1>
               <div>
                 <Timer />
@@ -89,9 +89,12 @@ export const FlashSale = ({ posts }) => {
             </Link>
           ))}
         </div>
-        <button className="bg-[#DB4444] text-white py-4 px-12 rounded ">
-          View All Products
-        </button>
+        <Link href={"/viewAll"}>
+          <button className="bg-[#DB4444] text-white py-4 px-12 rounded ">
+            View All Products
+          </button>
+        </Link>
+
         <br />
         <br />
         <hr className="w-full" />
