@@ -8,12 +8,10 @@ import { Logistic } from "@/components/Logistic";
 import { NewArrival } from "@/components/NewArrival";
 import { SellingProducts } from "@/components/SellingProducts";
 import { SideBar } from "@/components/SideBar";
-import Image from "next/image";
 
 export default async function Home() {
   const result = await fetch("https://fakestoreapi.com/products");
   const objResult = await result.json();
-  console.log(objResult);
 
   return (
     <div>
