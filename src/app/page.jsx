@@ -6,7 +6,7 @@ import { FlashSale } from "@/components/FlashSale";
 import { Hero } from "@/components/Hero";
 import { Logistic } from "@/components/Logistic";
 import { NewArrival } from "@/components/NewArrival";
-import { SellingProducts } from "@/components/SellingProducts";
+
 import { SideBar } from "@/components/SideBar";
 
 export default async function Home() {
@@ -20,6 +20,7 @@ export default async function Home() {
         <Hero />
       </div>
       <FlashSale posts={objResult} />
+
       <Catogeries />
       <BestSelling posts={objResult} />
       <BodyHero />

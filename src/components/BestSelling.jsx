@@ -46,9 +46,9 @@ export const BestSelling = ({ posts }) => {
               </div>
               <p>{title}</p>
               <p className="text-red-400">{price}$</p>
-              <p className="w-[100px] h-5 flex items-center gap-3">
+              <div className="w-[100px] h-5 flex items-center gap-3">
                 <Rating /> <p className="opacity-50">{rating.rate}</p>
-              </p>
+              </div>
             </Link>
           ))}
       </div>

@@ -1,7 +1,5 @@
 "use client";
-import React, { useState } from "react";
-import { Chip } from "./Chip";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
+
 import Link from "next/link";
 import { AddCard } from "./AddCard";
 import { Rating } from "./Rating";
@@ -35,9 +33,9 @@ export const AllProduct = ({ allproducts }) => {
             </div>
             <p>{title}</p>
             <p className="text-[#DB4444]">{price}$</p>
-            <p className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <Rating /> {rating.rate}
-            </p>
+            </div>
           </Link>
         ))}
       </div>

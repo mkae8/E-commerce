@@ -30,9 +30,9 @@ export const RelatedItems = ({ products }) => {
 
             <p>{title}</p>
             <p className="text-red-400">{price}$</p>
-            <p className="flex items-center gap-3">
+            <div className="flex items-center gap-3">
               <Rating /> {rating.rate}
-            </p>
+            </div>
           </Link>
         ))}
       </div>
