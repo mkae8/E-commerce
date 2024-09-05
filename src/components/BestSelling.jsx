@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { Chip } from "./Chip";
 import Link from "next/link";
+import { AddCard } from "./AddCard";
+import { Rating } from "./Rating";
 
 export const BestSelling = ({ posts }) => {
   const [visiblePost, setVisiblePost] = useState(4);
@@ -31,17 +33,22 @@ export const BestSelling = ({ posts }) => {
             <Link
               key={id}
               href={`/list/${id}`}
-              className="flex flex-col w-[270px] h-[350px] justify-around shrink-0"
+              className=" group flex flex-col w-[270px] h-[350px] justify-around shrink-0"
             >
-              <div className="flex items-center justify-center w-[270px] h-[250px] ">
+              <div className="flex  flex-col items-center justify-center w-[270px] h-[250px] ">
                 <img
                   src={image}
                   className=" w-[186px] h-[164px] object-contain"
                 />
+                <div className="opacity-0 group-hover:opacity-100">
+                  <AddCard />
+                </div>
               </div>
               <p>{title}</p>
               <p className="text-red-400">{price}$</p>
-              <p className="opacity-50">{rating.rate}</p>
+              <p className="w-[100px] h-5 flex items-center gap-3">
+                <Rating /> <p className="opacity-50">{rating.rate}</p>
+              </p>
             </Link>
           ))}
       </div>

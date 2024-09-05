@@ -19,8 +19,8 @@ export default async function Home() {
         <SideBar />
         <Hero />
       </div>
-      <FlashSale />
-      <SellingProducts posts={objResult} />
+      <FlashSale posts={objResult} />
+      {/* <SellingProducts posts={objResult} /> */}
       <Catogeries />
       <BestSelling posts={objResult} />
       <BodyHero />

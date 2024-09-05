@@ -88,10 +88,11 @@
 //   );
 // };
 
+"use client";
 import React, { useState, useEffect } from "react";
 
 export const Timer = () => {
-  const [counter, setCounter] = useState(60);
+  const [counter, setCounter] = useState(60); // 60 seconds initially
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -101,29 +102,33 @@ export const Timer = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Calculate the hours, minutes, and seconds from the counter
+  const minutes = Math.floor(counter / 60);
+  const seconds = counter % 60;
+
   return (
     <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+      <div className="flex flex-col">
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": 3 }}></span>
         </span>
         days
       </div>
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+      <div className="flex flex-col">
         <span className="countdown font-mono text-5xl">
           <span style={{ "--value": 23 }}></span>
         </span>
         hours
       </div>
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+      <div className="flex flex-col">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": 19 }}></span>
+          <span style={{ "--value":  minutes }}></span>
         </span>
         min
       </div>
-      <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+      <div className="flex flex-col">
         <span className="countdown font-mono text-5xl">
-          <span style={{ "--value": counter }}></span>
+          <span style={{ "--value": seconds }}></span>
         </span>
         sec
       </div>

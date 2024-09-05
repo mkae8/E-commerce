@@ -4,7 +4,7 @@ import { CiHeart } from "react-icons/ci";
 import { Rating } from "./Rating";
 
 export const ProductDetail = ({ products }) => {
-  const { id, title, price, description, category, image, rating } = products;
+  const { id, title, price, description, image, rating } = products;
   return (
     <div
       className="mt-[100px] mb-[100px] flex flex-col justify-between w-full gap-[60px] "

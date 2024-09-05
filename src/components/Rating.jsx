@@ -4,7 +4,7 @@ import React from "react";
 
 export const Rating = () => {
   return (
-    <div className="rating">
+    <div className="rating w-[100px] h-5 ">
       <input
         type="radio"
         name="rating-2"

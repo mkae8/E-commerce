@@ -51,11 +51,17 @@ export const Header = () => {
               className="bg-[#F5F5F5] py-[7px] pr-3 pl-5 rounded-[4px] w-[243px] h-[38px] "
               placeholder="What are you looking for?"
             />
+
             <CiSearch className="w-5 h-5 absolute right-[31.5%]" />
 
             <div className="flex items-center gap-4">
-              <CiHeart className="w-8 h-8" />
-              <CiShoppingCart className=" w-8 h-8" />
+              <Link href={"/liked"}>
+                <CiHeart className="w-8 h-8" />
+              </Link>
+
+              <Link href={"/shopping"}>
+                <CiShoppingCart className=" w-8 h-8" />
+              </Link>
             </div>
           </div>
         </div>
