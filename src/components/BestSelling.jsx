@@ -7,7 +7,6 @@ import { Rating } from "./Rating";
 
 export const BestSelling = ({ posts }) => {
   const [visiblePost, setVisiblePost] = useState(4);
-  const loadMore = () => setVisiblePost((prev) => prev + 17);
 
   return (
     <div className="flex flex-col w-full h-[518px] mt-[100px] gap-[60px]">
@@ -18,12 +17,11 @@ export const BestSelling = ({ posts }) => {
         </div>
         <div className="flex justify-between">
           <h1 className="text-[36px] font-semibold">Best Selling Products</h1>
-          <button
-            onClick={loadMore}
-            className="bg-[#DB4444] py-4 px-12 text-white rounded"
-          >
-            View All
-          </button>
+          <Link href={"/viewAll"}>
+            <button className="bg-[#DB4444] py-4 px-12 text-white rounded">
+              View All
+            </button>
+          </Link>
         </div>
       </div>
       <div className="w-full h-[400px] flex justify-between  overflow-scroll">
