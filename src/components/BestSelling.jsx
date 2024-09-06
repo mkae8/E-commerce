@@ -7,6 +7,28 @@ import { Rating } from "./Rating";
 
 export const BestSelling = ({ posts }) => {
   const [visiblePost, setVisiblePost] = useState(4);
+  const handleAddToCart = () => {
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    const itemIndex = cartItems.findIndex(
+      (item) => item.id === products.id && item.title === products.title
+    );
+
+    if (itemIndex > -1) {
+      cartItems[itemIndex].count += count;
+    } else {
+      const newItem = {
+        id: products.id,
+        title: products.title,
+        price: products.price,
+        count,
+        image: products.image,
+      };
+      cartItems.push(newItem);
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  };
 
   return (
     <div className="flex flex-col w-full h-[518px] mt-[100px] gap-[60px]">
@@ -38,9 +60,9 @@ export const BestSelling = ({ posts }) => {
                   src={image}
                   className=" w-[186px] h-[164px] object-contain"
                 />
-                <div className="opacity-0 group-hover:opacity-100">
+                <button className="opacity-0 group-hover:opacity-100">
                   <AddCard />
-                </div>
+                </button>
               </div>
               <p>{title}</p>
               <p className="text-red-400">{price}$</p>
