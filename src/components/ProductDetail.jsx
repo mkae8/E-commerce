@@ -5,7 +5,7 @@ import { CiHeart } from "react-icons/ci";
 import { Rating } from "./Rating";
 
 export const ProductDetail = ({ products }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   const handleAddToCart = () => {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];

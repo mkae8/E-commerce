@@ -1,33 +1,16 @@
 "use client";
-import React, { useState } from "react";
 
-export const PlusMinus = () => {
-  const [count, setCount] = useState(0);
+export const PlusMinus = ({ count, setCount }) => {
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count > 1 ? count - 1 : 1);
 
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  };
   return (
-    <div className="flex items-center">
-      <button
-        onClick={decrement}
-        className="border w-[40px] h-[44px] px-2 py-1 hover:bg-[#DB4444] hover:text-white"
-      >
+    <div className="flex items-center gap-2">
+      <button onClick={decrement} className="btn">
         -
       </button>
-      <span className=" flex items-center border w-[80px] h-[44px] text-[20px] justify-center">
-        {count}
-      </span>
-      <button
-        onClick={increment}
-        className="border w-[40px] h-[44px] px-2 py-1 hover:bg-[#DB4444] hover:text-white"
-      >
+      <span>{count}</span>
+      <button onClick={increment} className="btn">
         +
       </button>
     </div>
