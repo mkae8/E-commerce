@@ -20,7 +20,6 @@ export default async function Home() {
         <Hero />
       </div>
       <FlashSale posts={objResult} />
-
       <Catogeries />
       <BestSelling posts={objResult} />
       <BodyHero />

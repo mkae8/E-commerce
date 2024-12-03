@@ -17,13 +17,13 @@ const listArray = [
     img: "/jbl.png",
     index: 1,
   },
-  {
-    logo: "/borgioLogo.png",
-    title: "Боргио ",
-    sale: "Up to Friday 50% off Voucher",
-    img: "/borgio.png",
-    index: 2,
-  },
+  // {
+  //   logo: "/borgioLogo.png",
+  //   title: "Боргио ",
+  //   sale: "Up to Friday 50% off Voucher",
+  //   img: "/borgio.png",
+  //   index: 2,
+  // },
 ];
 
 export const Hero = () => {
